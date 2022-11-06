@@ -16,7 +16,6 @@ class Slotmap
 	private:
 		int _genCtr { 0 };
 		Size_t _free { 0 };
-		Size_t _capacity { 0 };
 
 		Indices _index {};
 
@@ -28,7 +27,7 @@ class Slotmap
 		moveDataSlot() noexcept;
 
 		void
-		resize( Size_t dataCapacity ) noexcept;
+		resize() noexcept;
 
 		Size_t
 		getDataId( const T& p_data ) const noexcept;
@@ -38,6 +37,9 @@ class Slotmap
 
 		void
 		checkSize() noexcept;
+
+		void
+		renumIndexChain() noexcept;
 
 	public:
 		Slotmap( Size_t p_size = 10 ) noexcept;
