@@ -5,13 +5,13 @@ endif
 ############################
 #### MAKE VARS
 ############################
-APP 	:= app
+APP 	:= slotmap
 CC 		:= g++
 CCFLAGS := -Wall -pedantic -std=c++20
 C		:= gcc
 CFLAGS 	:=
 LIBS 	:=
-INCDIRS := -Isrc
+INCDIRS := -Isrc -Ilib
 DEFINES :=
 
 .PHONY: info
